@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Training Programs - Percept Infosystem Consultants</title>
+    <link rel="stylesheet" href="/all.files/.CSS/it.css">
+</head>
+<body>
+
+    <!-- Banner Section -->
+    <section class="banner">
+        <img src="/all images/team-working-together-project_23-2149325411.avif" alt="IT Training Banner">
+        <div class="banner-content">
+            <h1>IT Training Programs</h1>
+            <p>Your Gateway to Success in Technology</p>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="overview">
+        <h2>Overview of Our IT Training Programs</h2>
+        <p>At Percept Infosystem Consultants, we offer comprehensive training programs in various IT branches. Our expert trainers provide industry-relevant knowledge to empower you for a successful career in technology.</p>
+    </section>
+
+    <!-- Training Programs Section -->
+    <section class="training-programs">
+        <h2>Available IT Training Branches</h2>
+        <div class="programs-container">
+
+            <!-- Program 1: Software Development -->
+            <div class="program-item">
+                <img src="/all images/automation testing.png" alt="Software Development">
+                <h3>Software Development</h3>
+                <p>Learn modern programming languages, software engineering principles, and development methodologies.</p>
+                <ul>
+                    <li><strong>Key Topics:</strong> Java, Python, C#, Agile Methodologies, Version Control.</li>
+                    <li><strong>Duration:</strong> 12 Weeks</li>
+                    <li><strong>Prerequisites:</strong> Basic programming knowledge recommended.</li>
+                </ul>
+                <button class="enroll-button" onclick="goToPayment('Software Development', 5000)">Enroll Now</button>
+            </div>
+
+            <!-- Program 2: Data Science -->
+            <div class="program-item">
+                <img src="/all images/Data science.png" alt="Data Science">
+                <h3>Data Science</h3>
+                <p>Master data analysis, machine learning, and statistical modeling using Python and R.</p>
+                <ul>
+                    <li><strong>Key Topics:</strong> Machine Learning, Data Visualization, Big Data, SQL.</li>
+                    <li><strong>Duration:</strong> 14 Weeks</li>
+                    <li><strong>Prerequisites:</strong> Basic statistics knowledge recommended.</li>
+                </ul>
+                <button class="enroll-button" onclick="goToPayment('Data Science', 6000)">Enroll Now</button>
+            </div>
+
+            <!-- Program 3: Cybersecurity -->
+            <div class="program-item">
+                <img src="/all images/Data science.png" alt="Cybersecurity">
+                <h3>Cybersecurity</h3>
+                <p>Understand the principles of protecting networks, systems, and data from cyber threats.</p>
+                <ul>
+                    <li><strong>Key Topics:</strong> Network Security, Ethical Hacking, Risk Management.</li>
+                    <li><strong>Duration:</strong> 10 Weeks</li>
+                    <li><strong>Prerequisites:</strong> Basic networking knowledge recommended.</li>
+                </ul>
+                <button class="enroll-button" onclick="goToPayment('Cybersecurity', 7000)">Enroll Now</button>
+            </div>
+
+            <!-- Program 4: Web Development -->
+            <div class="program-item">
+                <img src="/all images/Blue and Yellow Minimalist Web Development Instagram Post.png" alt="Web Development">
+                <h3>Web Development</h3>
+                <p>Learn to build responsive websites using HTML, CSS, JavaScript, and frameworks like React.</p>
+                <ul>
+                    <li><strong>Key Topics:</strong> Frontend Development, Backend Development, REST APIs.</li>
+                    <li><strong>Duration:</strong> 12 Weeks</li>
+                    <li><strong>Prerequisites:</strong> None</li>
+                </ul>
+                <button class="enroll-button" onclick="goToPayment('Web Development', 5000)">Enroll Now</button>
+            </div>
+
+            <!-- Program 5: Cloud Computing -->
+            <div class="program-item">
+                <img src="/all images/data anlaytic.webp" alt="Cloud Computing">
+                <h3>Cloud Computing</h3>
+                <p>Gain skills in cloud services, deployment models, and security measures in cloud environments.</p>
+                <ul>
+                    <li><strong>Key Topics:</strong> AWS, Azure, Google Cloud, DevOps.</li>
+                    <li><strong>Duration:</strong> 8 Weeks</li>
+                    <li><strong>Prerequisites:</strong> Basic IT knowledge recommended.</li>
+                </ul>
+                <button class="enroll-button" onclick="goToPayment('Cloud Computing', 6000)">Enroll Now</button>
+            </div>
+
+            <!-- Program 6: Mobile App Development -->
+            <div class="program-item">
+                <img src="/all images/data anlaytic.webp" alt="Mobile App Development">
+                <h3>Mobile App Development</h3>
+                <p>Learn to develop applications for iOS and Android platforms using Swift and Kotlin.</p>
+                <ul>
+                    <li><strong>Key Topics:</strong> UI/UX Design, App Architecture, Database Management.</li>
+                    <li><strong>Duration:</strong> 10 Weeks</li>
+                    <li><strong>Prerequisites:</strong> Basic programming knowledge recommended.</li>
+                </ul>
+                <button class="enroll-button" onclick="goToPayment('Mobile App Development', 6500)">Enroll Now</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Payment Section -->
+    <section class="payment-section" id="paymentSection" style="display: none;">
+        <h2>Payment for <span id="courseName"></span></h2>
+        <p>Total Amount: ₹<span id="coursePrice"></span></p>
+        <form id="paymentForm" action="/payment" method="post">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="paymentMethod">Select Payment Method:</label>
+            <select id="paymentMethod" name="paymentMethod" required>
+                <option value="credit_card">Credit Card</option>
+                <option value="debit_card">Debit Card</option>
+                <option value="net_banking">Net Banking</option>
+                <option value="upi">UPI</option>
+            </select>
+
+            <button type="submit" class="pay-button">Proceed to Payment</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Percept Infosystem Consultants. All Rights Reserved.</p>
+        <p>Follow us on <a href="#">Social Media</a></p>
+    </footer>
+
+    <script>
+        function goToPayment(courseName, coursePrice) {
+            document.getElementById('courseName').innerText = courseName;
+            document.getElementById('coursePrice').innerText = coursePrice;
+            document.getElementById('paymentSection').style.display = 'block';
+        }
+    </script>
+
+    
+
+</body>
+</html>
